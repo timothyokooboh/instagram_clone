@@ -50,6 +50,7 @@ protected static function boot()
       Mail::to($user->email)->send(new NewUserWelcomeMail());
    }); 
 }
+
 public function posts (){
     return $this->hasMany(Post::class)->orderBy('created_at', 'DESC');
 }
